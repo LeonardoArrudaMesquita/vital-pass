@@ -1,6 +1,5 @@
 import {
   isRouteErrorResponse,
-  Links,
   Meta,
   Outlet,
   Scripts,
@@ -8,7 +7,7 @@ import {
 } from "react-router";
 
 import type { Route } from "./+types/root";
-import "./app.css";
+import { GlobalStyles } from "./global";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -27,13 +26,17 @@ export function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <head>
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" />
+          <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=New+Amsterdam&display=swap" rel="stylesheet" />
+      
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <Meta />
-        <Links />
+        <Meta />        
       </head>
       <body>
         {children}
+        <GlobalStyles />
         <ScrollRestoration />
         <Scripts />
       </body>
