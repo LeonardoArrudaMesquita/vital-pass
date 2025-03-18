@@ -8,6 +8,7 @@ export function ProtocolList({ data }: ProtocolListProps) {
     <ProtocolListSC>
       {data.map(({ title, description, color }, index) => (
         <ProtocolItem
+          key={index}
           tag={index}
           title={title}
           description={description}

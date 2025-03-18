@@ -49,8 +49,13 @@ export function Risks() {
       </Header>
 
       <Content>
-        {data.map(({ color, title, description }) => (
-          <RiskCard color={color} title={title} description={description} />
+        {data.map(({ color, title, description }, index) => (
+          <RiskCard            
+            color={color}
+            title={title}
+            description={description}
+            key={index}
+          />
         ))}
       </Content>
     </Container>

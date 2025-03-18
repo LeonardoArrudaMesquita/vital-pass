@@ -58,8 +58,9 @@ export function SpecialistList() {
 
       <SpecialistGrid>
         {data.map(({ title, description, color }, index) => (
-          <SpecialistCard        
-            tag={index + 1}
+          <SpecialistCard
+            key={index}
+            tag={index}
             color={color}
             title={title}
             description={description}

@@ -45,8 +45,9 @@ export function Opportunities() {
           Invista na Total Pass - Transforme o Cuidado com a Saúde
         </Paragraph>
       </Header>
-      {data.map(({ color, title, description, highlight }) => (
+      {data.map(({ color, title, description, highlight }, index) => (
         <OpportunityCard
+          key={index}
           color={color}
           highlighted={highlight}
           title={title}

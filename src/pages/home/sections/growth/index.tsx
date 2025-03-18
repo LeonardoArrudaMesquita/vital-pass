@@ -51,8 +51,9 @@ export function Growth() {
         <Paragraph>Projeções e Metas Financeiras Estratégicas</Paragraph>
       </Header>
       <Content>
-        {data.map(({ title, color, highlight, description }) => (
+        {data.map(({ title, color, highlight, description }, index) => (
           <GrowthCard
+            key={index}
             color={color}
             title={title}
             highlight={highlight}

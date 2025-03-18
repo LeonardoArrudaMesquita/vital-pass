@@ -41,8 +41,13 @@ export function Strategies() {
           Explorando táticas inovadoras para expandir a base de clientes
         </Paragraph>
       </Header>
-      {data.map(({ color, title, description }) => (
-        <StrategyCard color={color} title={title} description={description} />
+      {data.map(({ color, title, description }, index) => (
+        <StrategyCard
+          color={color}
+          title={title}
+          description={description}
+          key={index}
+        />
       ))}
     </Container>
   );

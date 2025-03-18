@@ -40,8 +40,9 @@ export function StoryTelling() {
       </Header>
 
       <Content>
-        {data.map(({ color, situation, title, description }) => (
+        {data.map(({ color, situation, title, description }, index) => (
           <StoryCard
+            key={index}
             color={color}
             situation={situation}
             title={title}

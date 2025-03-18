@@ -4,11 +4,12 @@ import type { ProtocolItemProps } from './types'
 import { Paragraph } from 'src/components'
 
 export function ProtocolItem({ color, tag, title, description }: ProtocolItemProps) {
-  const tagValue = tag + 1;
+  const normalizedTag = tag + 1;
+  const formattedTag = normalizedTag.toString().padStart(2, "0");
 
   return (
     <Container>
-      <SpecialistTag bgcolor={color}>{tagValue.toString().padStart(2, "0")}</SpecialistTag>
+      <SpecialistTag bgcolor={color}>{formattedTag}</SpecialistTag>
       <Content>
         <SmallTitle>{title}</SmallTitle>        
         <Paragraph>{description}</Paragraph>

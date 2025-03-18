@@ -59,8 +59,8 @@ export function Plans() {
           </tr>
         </TableHeader>
         <TableBody>
-        {data.map(({ plan, price, benefit }) => (          
-            <TableRow>
+        {data.map(({ plan, price, benefit }, index) => (          
+            <TableRow key={index}>
               <TableCell>{plan}</TableCell>
               <TableCell>{price}</TableCell>
               <TableCell>{benefit}</TableCell>
