@@ -42,7 +42,7 @@ export function Opportunities() {
           Oportunidade de Investimento
         </Title>
         <Paragraph>
-          Invista na Total Pass - Transforme o Cuidado com a Saúde
+          Invista na Vital Pass - Transforme o Cuidado com a Saúde
         </Paragraph>
       </Header>
       {data.map(({ color, title, description, highlight }, index) => (
